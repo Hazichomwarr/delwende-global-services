@@ -46,7 +46,7 @@ export default function ConsultationCTA() {
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 bg-white/10 px-6 py-4 text-sm font-extrabold text-white transition hover:bg-white/15"
               >
-                Request Consultation
+                Schedule Consultation
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>

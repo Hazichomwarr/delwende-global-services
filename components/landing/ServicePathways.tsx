@@ -61,7 +61,7 @@ export default function ServicePathways() {
             return (
               <article
                 key={pathway.audience}
-                className="group flex min-h-105 flex-col rounded-lg border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg"
+                className="group flex h-full flex-col rounded-lg border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg"
               >
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50 text-emerald-700 transition group-hover:bg-emerald-700 group-hover:text-white">

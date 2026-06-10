@@ -2,13 +2,14 @@ import {
   BadgeDollarSign,
   BookOpenCheck,
   FileText,
-  Gauge,
   Languages,
-  Landmark,
   ShieldCheck,
   Stamp,
+  Receipt,
+  TrendingUp,
 } from "lucide-react";
 import Container from "../ui/Container";
+import Link from "next/link";
 
 const services = [
   {
@@ -16,44 +17,52 @@ const services = [
     description:
       "Individual & business tax preparation, tax planning and IRS assistance.",
     icon: FileText,
+    pageLink: "/services/taxes",
   },
   {
     title: "Insurance",
     description: "Auto, home, life, and business insurance solutions.",
     icon: ShieldCheck,
+    pageLink: "/services/insurance",
   },
   {
     title: "Immigration Services",
     description:
       "Document preparation, forms assistance and immigration support.",
     icon: BookOpenCheck,
+    pageLink: "/services/immigration",
+  },
+  {
+    title: "Credit Repair",
+    description: "Improve your credit score and rebuild your financial future.",
+    icon: TrendingUp,
+    pageLink: "/services/credit-repair",
   },
   {
     title: "Bookkeeping",
     description:
       "Accurate bookkeeping and financial organization for businesses.",
-    icon: Landmark,
+    icon: Receipt,
+    pageLink: "/services/book-keeping",
   },
   {
     title: "Notary",
     description: "Certified notary public services for important documents.",
     icon: Stamp,
+    pageLink: "/services/notary",
   },
   {
     title: "Translation",
     description:
       "Professional translation services, including French and English.",
     icon: Languages,
+    pageLink: "/services/translation",
   },
   {
     title: "Money Transfer",
     description: "Secure and reliable international money transfer services.",
     icon: BadgeDollarSign,
-  },
-  {
-    title: "Credit Repair",
-    description: "Improve your credit score and rebuild your financial future.",
-    icon: Gauge,
+    pageLink: "/services/money-transfer",
   },
 ];
 
@@ -73,22 +82,29 @@ export default function Services() {
             const Icon = service.icon;
 
             return (
-              <article
+              <Link
+                href={service.pageLink}
                 key={service.title}
-                className="rounded-lg border border-slate-200 bg-white px-8 py-7 text-center shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-md"
+                className="flex flex-col justify-between rounded-lg border border-slate-200 bg-white px-8 py-7 text-center shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-md"
               >
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50">
-                  <Icon className="h-8 w-8 text-emerald-700" strokeWidth={2} />
+                <div>
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50">
+                    <Icon
+                      className="h-8 w-8 text-emerald-700"
+                      strokeWidth={2}
+                    />
+                  </div>
+
+                  <h3 className="mt-5 font-serif text-xl font-black">
+                    {service.title}
+                  </h3>
+
+                  <p className="mx-auto mt-3 max-w-48 text-sm leading-6 text-slate-700">
+                    {service.description}
+                  </p>
                 </div>
-
-                <h3 className="mt-5 font-serif text-xl font-black">
-                  {service.title}
-                </h3>
-
-                <p className="mx-auto mt-3 max-w-48 text-sm leading-6 text-slate-700">
-                  {service.description}
-                </p>
-              </article>
+                <span className="text-xs">Learn More →</span>
+              </Link>
             );
           })}
         </div>

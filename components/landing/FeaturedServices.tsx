@@ -59,7 +59,7 @@ export default function FeaturedServices() {
             </div>
 
             <p className="mt-8 text-sm font-bold uppercase tracking-[0.18em] text-amber-300">
-              Featured Service
+              Most Requested Service
             </p>
 
             <h2 className="mt-3 font-serif text-4xl font-black leading-tight tracking-tight md:text-5xl">
@@ -112,7 +112,7 @@ export default function FeaturedServices() {
                     href={service.href}
                     className="mt-6 inline-flex text-sm font-extrabold text-emerald-800 transition hover:text-emerald-950"
                   >
-                    Learn more
+                    Request Help
                   </a>
                 </article>
               );

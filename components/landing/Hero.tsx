@@ -11,17 +11,17 @@ import { BUSINESS } from "@/lib/constants/businessInfos";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-white text-slate-950">
+    <section className="min-h-[85vh]bg-white text-slate-950">
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/del-hero.png"
-            alt="Desk with passport, documents, and calculator"
+            alt="Delwende Global Services helping clients with immigration, tax, and business documents"
             fill
             priority
             className="object-cover object-left"
           />
-          <div className="absolute inset-0 bg-linear-to-r from-white via-white/90 to-white/20" />
+          <div className="absolute inset-0 bg-linear-to-r from-white via-white/75 to-transparent" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-6 pb-28 pt-12 lg:pb-36 lg:pt-16">
@@ -58,30 +58,20 @@ export default function Hero() {
                 Request Consultation
               </a>
             </div>
-
-            <div className="mt-7 flex items-center gap-4">
-              {/* <div className="flex -space-x-3">
-                {[
-                  "/images/client-1.jpg",
-                  "/images/client-2.jpg",
-                  "/images/client-3.jpg",
-                ].map((src) => (
-                  <Image
-                    key={src}
-                    src={src}
-                    alt=""
-                    width={42}
-                    height={42}
-                    className="rounded-full border-2 border-white object-cover"
-                  />
-                ))}
-              </div> */}
+            <div className="mt-6 flex gap-8">
+              <div>
+                <p className="text-3xl font-bold">8+</p>
+                <p>Services</p>
+              </div>
 
               <div>
-                <div className="text-lg leading-none text-amber-400">★★★★★</div>
-                <p className="mt-1 text-sm text-slate-800">
-                  Trusted by local families and small businesses in Newark.
-                </p>
+                <p className="text-3xl font-bold">2</p>
+                <p>Languages</p>
+              </div>
+
+              <div>
+                <p className="text-3xl font-bold">1</p>
+                <p>Trusted Location</p>
               </div>
             </div>
           </div>

@@ -2,9 +2,8 @@ import ConsultationCTA from "@/components/landing/ConsultationCTA";
 import FAQ from "@/components/landing/FAQ";
 import FeaturedServices from "@/components/landing/FeaturedServices";
 import Hero from "@/components/landing/Hero";
-import ServicePathways from "@/components/landing/ServicePathways";
+import MeetTheFounder from "@/components/landing/MeetTheFounder";
 import Services from "@/components/landing/Services";
-import TrustSection from "@/components/landing/TrustSection";
 import WhyChooseUs from "@/components/landing/WhyChooseUs";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
@@ -16,9 +15,9 @@ export default function Home() {
       <Hero />
       <Services />
       <WhyChooseUs />
-      <ServicePathways />
+      {/* <ServicePathways /> */}
       <FeaturedServices />
-      <TrustSection />
+      <MeetTheFounder />
       <ConsultationCTA />
       <FAQ />
       <Footer />

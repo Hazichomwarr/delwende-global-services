@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "What languages do you support?",
     answer:
-      "We offer support in English, French, and other supported languages depending on availability. Call ahead if you need help in a specific language.",
+      "English and French support are available. Please call ahead if you require assistance in another language.",
   },
 ];
 
