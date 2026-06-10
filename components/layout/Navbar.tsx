@@ -1,3 +1,4 @@
+import { BUSINESS } from "@/lib/constants/businessInfos";
 import { ChevronDown, Globe2, Phone } from "lucide-react";
 
 export default function Navbar() {
@@ -42,11 +43,11 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-6 lg:flex">
           <a
-            href="tel:9734440195"
+            href={BUSINESS.phone.value}
             className="flex items-center gap-2 text-sm font-bold text-emerald-900"
           >
             <Phone className="h-4 w-4 fill-emerald-800 text-emerald-800" />
-            (973) 444-0195
+            {BUSINESS.phone.label}
           </a>
 
           <a

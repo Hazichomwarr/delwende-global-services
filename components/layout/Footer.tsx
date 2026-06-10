@@ -1,3 +1,4 @@
+import { BUSINESS } from "@/lib/constants/businessInfos";
 import { Mail, MapPin, Phone, Send, ShieldCheck } from "lucide-react";
 import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 
@@ -106,24 +107,31 @@ export default function Footer() {
 
             <div className="mt-5 space-y-4 text-sm text-slate-300">
               <a
-                href="tel:9734440195"
-                className="flex gap-3 transition hover:text-amber-300"
+                href={BUSINESS.phone.value}
+                className="flex gap-3 transition hover:text-amber-300 hover:underline cursor-pointer"
               >
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-emerald-300" />
-                <span>(973) 444-0195</span>
+                <span>{BUSINESS.phone.label}</span>
               </a>
 
               <a
-                href="mailto:info@delwendeglobalservices.com"
-                className="flex gap-3 transition hover:text-amber-300"
+                href={BUSINESS.email.value}
+                className="flex gap-3 transition hover:text-amber-300 hover:underline cursor-pointer"
               >
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-emerald-300" />
-                <span>info@delwendeglobalservices.com</span>
+                <span>{BUSINESS.email.label}</span>
               </a>
 
               <div className="flex gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-emerald-300" />
-                <span>123 Market Street, Newark, NJ 07102</span>
+                <a
+                  href={BUSINESS.location.value}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-amber-300 hover:underline cursor-pointer"
+                >
+                  <span>{BUSINESS.location.label}</span>
+                </a>
               </div>
             </div>
 

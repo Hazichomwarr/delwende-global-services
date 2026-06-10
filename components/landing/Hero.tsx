@@ -7,6 +7,7 @@ import {
   CheckCircle2,
   Globe2,
 } from "lucide-react";
+import { BUSINESS } from "@/lib/constants/businessInfos";
 
 export default function Hero() {
   return (
@@ -42,11 +43,11 @@ export default function Hero() {
 
             <div className="mt-7 flex flex-col gap-4 sm:flex-row">
               <a
-                href="tel:9734440195"
+                href={BUSINESS.phone.value}
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-emerald-700 px-6 py-4 text-sm font-bold text-white shadow-md transition hover:bg-emerald-800"
               >
                 <Phone className="h-4 w-4 fill-white" />
-                Call Now: (973) 444-0195
+                Call Now: {BUSINESS.phone.label}
               </a>
 
               <a

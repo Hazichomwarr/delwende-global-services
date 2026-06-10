@@ -1,3 +1,4 @@
+import { BUSINESS } from "@/lib/constants/businessInfos";
 import {
   ArrowRight,
   CalendarCheck,
@@ -34,11 +35,11 @@ export default function ConsultationCTA() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
-                href="tel:9734440195"
+                href={BUSINESS.phone.value}
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-amber-400 px-6 py-4 text-sm font-extrabold text-emerald-950 transition hover:bg-amber-300"
               >
                 <Phone className="h-4 w-4" />
-                Call (973) 444-0195
+                Call {BUSINESS.phone.label}
               </a>
 
               <a

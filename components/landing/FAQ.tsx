@@ -1,3 +1,4 @@
+import { BUSINESS } from "@/lib/constants/businessInfos";
 import { HelpCircle, Mail, MapPin, Phone } from "lucide-react";
 
 const faqs = [
@@ -57,24 +58,31 @@ export default function FAQ() {
 
             <div className="mt-5 space-y-4 text-sm text-slate-700">
               <a
-                href="tel:9734440195"
-                className="flex items-center gap-3 transition hover:text-emerald-800"
+                href={BUSINESS.phone.value}
+                className="flex items-center gap-3 transition hover:text-emerald-800 hover:underline cursor-pointer"
               >
                 <Phone className="h-4 w-4 text-emerald-700" />
-                (973) 444-0195
+                {BUSINESS.phone.label}
               </a>
 
               <a
-                href="mailto:info@delwendeglobalservices.com"
-                className="flex items-center gap-3 transition hover:text-emerald-800"
+                href={BUSINESS.email.value}
+                className="flex items-center gap-3 transition hover:text-emerald-800 hover:underline cursor-pointer"
               >
                 <Mail className="h-4 w-4 text-emerald-700" />
-                info@delwendeglobalservices.com
+                {BUSINESS.email.label}
               </a>
 
               <div className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" />
-                <span>123 Market Street, Newark, NJ 07102</span>
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-emerald-700 hover:underline cursor-pointer" />
+                <a
+                  href={BUSINESS.location.value}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:underline cursor-pointer"
+                >
+                  <span>{BUSINESS.location.label}</span>
+                </a>
               </div>
             </div>
           </div>
